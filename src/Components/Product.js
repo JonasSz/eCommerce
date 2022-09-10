@@ -3,7 +3,7 @@ import Kopfhörer from '../Headphones.png';
 
 function Product() {
   return (
-    <div className='bg-slate-200 max-width rounded-xl shadow-xl'>
+    <div className='bg-slate-200 w-full h-full rounded-xl shadow-xl'>
         <p className=' flex justify-center pt-2 font-semibold text-3xl text-slate-600'>
           149€
         </p>
