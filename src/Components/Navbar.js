@@ -4,7 +4,7 @@ import Searchbar from "../Elements/Searchbar";
 import ShoppingCarrtIcon from "../Elements/ShoppingCartIcon";
 import Title from "../Elements/Title";
 
-function Profile() {
+function Navbar() {
   const style =
     "bg-slate-300 shadow-2xl bg-opacity-75 rounded-xl mx-4 mt-2 flex justify-around h-20 relative";
   const [toggle, setToggle] = useState(false);
@@ -13,7 +13,7 @@ function Profile() {
   const DropdownRef = useRef (null);
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
-  useEffect(() => {
+    useEffect(() => {                             // Update windowsize
     function handleWindowResize() {
       setWindowSize(getWindowSize());
     }
@@ -71,4 +71,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Navbar;

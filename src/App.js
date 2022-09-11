@@ -1,29 +1,10 @@
-import Profile from './Components/Navbar';
-import Product from './Components/Product';
+import React from 'react';
+import Project from './Project'
 
 function App() {
   return (
-    <div className="App">
-      <Profile />
-
-      <div className="site-wrap mx-5 my-2">
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      </div>
-
-
-
-
-
-
-
-      
-    </div>
-  );
+    <Project />
+  )
 }
 
-export default App;
+export default App

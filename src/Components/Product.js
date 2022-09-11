@@ -1,5 +1,5 @@
 import React from 'react';
-import Kopfhörer from '../Headphones.png';
+import Kopfhörer from '../Pictures/Headphones.png';
 
 function Product() {
   return (

@@ -36,3 +36,7 @@
         display: block;
     }
 }
+
+.image-width {
+    width: max(80%, 30%);
+}
