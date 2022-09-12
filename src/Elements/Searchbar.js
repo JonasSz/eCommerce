@@ -8,7 +8,7 @@ function Searchbar({SearchbarRef}) {
   return (
     <>
       <div className="flex justify-center items-center w-6/12 searchbar" ref={SearchbarRef}>
-        <input type="text" className={style} />
+        <input type="text" placeholder='Suche nach einem Produkt' className={style} />
         <ImSearch className="text-4xl bg-slate-400 h-10 px-1 rounded-r-md" />
       </div>
     </>

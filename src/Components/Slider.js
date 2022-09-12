@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import UltimativerKlang from "../Pictures/SliderPics/Ultimativer-Klang.png";
 import ChairSlider from "../Pictures/SliderPics/ChairSlider.png";
 import EchoFamily from "../Pictures/SliderPics/Echo-Family.png";
@@ -9,14 +9,22 @@ import { CgArrowLeftO } from 'react-icons/cg';
 
 function Slider() {
     const SliderPictures = [UltimativerKlang, ChairSlider, EchoFamily, HandySlider];
+    const [SliderPicNumber, setSliderPicNumber] = useState(0);
+
+    if(SliderPicNumber === 4){
+      setSliderPicNumber(() => 0);
+    } 
+    if(SliderPicNumber === -1){
+      setSliderPicNumber(() => 3);
+    } 
 
   return (
     <div className='mt-5 flex justify-center'>
-        <img src={SliderPictures[0]} className='image-width rounded-2xl shadow-2xl absolute'/>
+        <img src={SliderPictures[SliderPicNumber]} className='image-width rounded-2xl shadow-2xl absolute'/>
 
         <div className="flex justify-between">
-        <SliderBtn ArrowIcon={<CgArrowLeftO/>} style=' text-5xl z-10'/>
-        <SliderBtn ArrowIcon={<CgArrowRightO/>} style=' text-5xl z-10'/>
+        <SliderBtn value='increase' ArrowIcon={<CgArrowLeftO/>} style=' text-5xl z-10' count={setSliderPicNumber} counter={SliderPicNumber}/>
+        <SliderBtn value='add' ArrowIcon={<CgArrowRightO/>} style=' text-5xl z-10' count={setSliderPicNumber} counter={SliderPicNumber}/>
         </div>
 
     </div>
