@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UltimativerKlang from "../Pictures/SliderPics/Ultimativer-Klang.png";
 import ChairSlider from "../Pictures/SliderPics/ChairSlider.png";
 import EchoFamily from "../Pictures/SliderPics/Echo-Family.png";
@@ -10,6 +10,16 @@ import { CgArrowLeftO } from 'react-icons/cg';
 function Slider() {
     const SliderPictures = [UltimativerKlang, ChairSlider, EchoFamily, HandySlider];
     const [SliderPicNumber, setSliderPicNumber] = useState(0);
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+         setSliderPicNumber(SliderPicNumber + 1)
+      }, 5000);
+      return () => clearInterval(interval);
+    }, [buttonClicked]);
+
+
 
     if(SliderPicNumber === 4){
       setSliderPicNumber(() => 0);
@@ -20,12 +30,14 @@ function Slider() {
 
   return (
     <div className='mt-5 flex justify-center'>
-        <img src={SliderPictures[SliderPicNumber]} className='image-width rounded-2xl shadow-2xl absolute'/>
+              <a href="/" className='image-width absolute hover:cursor-pointer'>
+              <img src={SliderPictures[SliderPicNumber]} className='rounded-2xl shadow-2xl'/>
+              </a>
 
-        <div className="flex justify-between">
-        <SliderBtn value='increase' ArrowIcon={<CgArrowLeftO/>} style=' text-5xl z-10' count={setSliderPicNumber} counter={SliderPicNumber}/>
-        <SliderBtn value='add' ArrowIcon={<CgArrowRightO/>} style=' text-5xl z-10' count={setSliderPicNumber} counter={SliderPicNumber}/>
-        </div>
+
+        <SliderBtn value='increase' ArrowIcon={<CgArrowLeftO/>} style='text-buttonsFont absolute z-10 mt-half mr-edge' count={setSliderPicNumber} counter={SliderPicNumber} buttonClicked={setButtonClicked}/>
+        <SliderBtn value='add' ArrowIcon={<CgArrowRightO/>} style=' text-buttonsFont absolute z-10 mt-half ml-edge' count={setSliderPicNumber} counter={SliderPicNumber}/>
+
 
     </div>
   )
