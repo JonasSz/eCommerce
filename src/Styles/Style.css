@@ -40,3 +40,6 @@
 .image-width {
     width: max(80%, 30%);
 }
+.section-width {
+    width: max(90%, 30%);
+}

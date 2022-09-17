@@ -28,8 +28,8 @@ function Slider() {
     } 
 
   return (
-    <div className='mt-5 flex justify-center'>
-              <a href="/" className='image-width absolute hover:cursor-pointer'>
+    <div className='mt-5 flex justify-center relative'>
+              <a href="/" className='image-width relative hover:cursor-pointer'>
               <img src={SliderPictures[SliderPicNumber]} className='rounded-2xl shadow-2xl'/>
               </a>
 
