@@ -10,14 +10,13 @@ import { CgArrowLeftO } from 'react-icons/cg';
 function Slider() {
     const SliderPictures = [UltimativerKlang, ChairSlider, EchoFamily, HandySlider];
     const [SliderPicNumber, setSliderPicNumber] = useState(0);
-    const [buttonClicked, setButtonClicked] = useState(false);
 
     useEffect(() => {
       const interval = setInterval(() => {
-         setSliderPicNumber(SliderPicNumber + 1)
+        setSliderPicNumber(setSliderPicNumber => setSliderPicNumber + 1);
       }, 5000);
       return () => clearInterval(interval);
-    }, [buttonClicked]);
+    }, []);
 
 
 
@@ -35,7 +34,7 @@ function Slider() {
               </a>
 
 
-        <SliderBtn value='increase' ArrowIcon={<CgArrowLeftO/>} style='text-buttonsFont absolute z-10 mt-half mr-edge' count={setSliderPicNumber} counter={SliderPicNumber} buttonClicked={setButtonClicked}/>
+        <SliderBtn value='increase' ArrowIcon={<CgArrowLeftO/>} style='text-buttonsFont absolute z-10 mt-half mr-edge' count={setSliderPicNumber} counter={SliderPicNumber} />
         <SliderBtn value='add' ArrowIcon={<CgArrowRightO/>} style=' text-buttonsFont absolute z-10 mt-half ml-edge' count={setSliderPicNumber} counter={SliderPicNumber}/>
 
 
