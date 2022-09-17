@@ -8,12 +8,12 @@ import PC from "../Pictures/PC2.png";
 function Section() {
   return (
     <div className="flex justify-center">
-      <div className="bg-slate-200 section-width mt-32 pt-5 rounded-xl pb-5 shadow-xl">
+      <div className="bg-slate-200 section-width mt-32 pt-5 rounded-xl pb-5 shadow-xl px-5">
         <h1 className="relative  text-6xl flex justify-center font-sans font-bold">
           Beliebte Kategorien
         </h1>
         <div className="site-wrap mt-6">
-          <SectionComponent title="Handys" src={iPhone13} href='/'/>
+          <SectionComponent title="Handys" src={iPhone13} href='/Handys'/>
           <SectionComponent title="Kopfhörer" src={HeadphonesSilver} href='/'/>
           <SectionComponent title="Stühle" src={GamingChair} href='/'/>
           <SectionComponent title="PCs" src={PC} href='/'/>
