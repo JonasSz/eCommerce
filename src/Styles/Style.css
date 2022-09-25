@@ -9,7 +9,7 @@
 .site-wrap {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
 .buttons-wrap {
     display: grid;

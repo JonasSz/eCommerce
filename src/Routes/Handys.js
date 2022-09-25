@@ -1,19 +1,20 @@
 import React from 'react'
 import Navbar from '../Components/Navbar';
-import Product from '../Components/Product'
-import { HandypageData } from '../Data/Handypage';
+import Product from '../Components/Product';
+import { HandyPageData } from '../Data/HandyPageData'
 
 
 
 function ProductPage() {
+  const listHandys = HandyPageData.map((data) => <Product src={data.src} text={data.title} price={data.price}/>)
+
+
   return (
     <>
     <Navbar />
 
     <div className="site-wrap mt-5 mx-5">
-      {HandypageData.map((data) => {
-          return <Product src={data.src} text={data.text} price={data.price}/>
-      })}
+      {listHandys}
 
     </div>
     <div className="site-wrap mt-5 mx-5">

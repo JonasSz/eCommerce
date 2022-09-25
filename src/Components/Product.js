@@ -7,7 +7,7 @@ function Product({src, text, price}) {
           {price}€
         </p>
 
-        <img src={src} alt="Picture not available" className=' relative'/>
+        <img src={src} alt="Picture not available" className=' h-96 relative'/>
 
         <p className=' flex justify-center font-medium text-xl text-slate-700'>
           {text}
