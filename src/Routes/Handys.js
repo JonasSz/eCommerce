@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from '../Components/Navbar';
 import Product from '../Components/Product'
+import { HandypageData } from '../Data/Handypage';
+
+
 
 function ProductPage() {
   return (
@@ -8,22 +11,16 @@ function ProductPage() {
     <Navbar />
 
     <div className="site-wrap mt-5 mx-5">
-    <Product />
-    <Product />
-    <Product />
-    <Product />
+      {HandypageData.map((data) => {
+          return <Product src={data.src} text={data.text} price={data.price}/>
+      })}
+
     </div>
     <div className="site-wrap mt-5 mx-5">
-    <Product />
-    <Product />
-    <Product />
-    <Product />
+
     </div>
     <div className="site-wrap mt-5 mx-5">
-    <Product />
-    <Product />
-    <Product />
-    <Product />
+
     </div>
 
     </>
