@@ -1,5 +1,6 @@
 import Navbar from '../Components/Navbar';
-import Section from '../Components/Section';
+import SectionPopular from '../Components/SectionPopular';
+import BestSales from '../Components/BestSales';
 import Slider from '../Components/Slider';
 
 
@@ -8,9 +9,8 @@ function Project() {
     <div className="App">
       <Navbar />
       <Slider />
-      <Section />
-
-
+      <SectionPopular />
+      <BestSales />
 
       
     </div>
