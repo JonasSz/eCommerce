@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Product({src, text, price, inShoppingCart, setInShoppingCart, classname}) {
+function Product({src, text, price, inShoppingCart, setInShoppingCart, classname, rounded}) {
 
 
   const countandset = () => {
@@ -14,7 +14,7 @@ function Product({src, text, price, inShoppingCart, setInShoppingCart, classname
         </p>
 
         <div className='flex justify-center'>
-        <img src={src} alt="Picture not available" className='picture-round h-96 relative'/>
+        <img src={src} alt="Picture not available" className={rounded} />
         </div>
 
 

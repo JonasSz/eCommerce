@@ -8,7 +8,7 @@ import PC from "../Pictures/PC2.png";
 function BestSales() {
   return (
     <div className="flex justify-center">
-      <div className="bg-slate-300 section-width mt-16 pt-5 rounded-xl pb-5 shadow-xl px-5">
+      <div className="bg-slate-500 section-width mt-16 pt-5 rounded-xl pb-5 shadow-xl px-5">
         <h1 className="relative  text-6xl flex justify-center font-sans font-bold">
           Am meisten Gekauft
         </h1>

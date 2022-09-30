@@ -5,13 +5,13 @@ import { HeadphonesData } from '../Data/HeadphonesData'
 
 
 
-function ProductPage() {
+function Headphones() {
   const [inShoppingCart, setInShoppingCart] = useState(0);
-  const listHeadphones = HeadphonesData.map((data) => <Product classname='bg-white border-slate-300 border-2 w-full h-full rounded-xl shadow-xl' setInShoppingCart={setInShoppingCart} inShoppingCart={inShoppingCart} src={data.src} text={data.title} price={data.price}/>)
+  const listHeadphones = HeadphonesData.map((data) => <Product rounded='h-96 relative' classname='bg-white w-full h-full rounded-xl shadow-xl' setInShoppingCart={setInShoppingCart} inShoppingCart={inShoppingCart} src={data.src} text={data.title} price={data.price}/>)
 
 
   return (
-    <div className='bg-slate-100'>
+    <div className='bg-slate-600'>
     <Navbar inShoppingCart={inShoppingCart}/>
 
     <div className="site-wrap mt-5 mx-5">
@@ -24,4 +24,4 @@ function ProductPage() {
   )
 }
 
-export default ProductPage
+export default Headphones
