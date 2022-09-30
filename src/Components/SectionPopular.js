@@ -14,9 +14,9 @@ function SectionPopular() {
         </h1>
         <div className="site-wrap mt-6">
           <SectionComponent title="Handys" src={iPhone13} href='/Handys'/>
-          <SectionComponent title="Kopfhörer" src={HeadphonesSilver} href='/'/>
-          <SectionComponent title="Stühle" src={GamingChair} href='/'/>
-          <SectionComponent title="PCs" src={PC} href='/'/>
+          <SectionComponent title="Kopfhörer" src={HeadphonesSilver} href='/Kopfhoerer'/>
+          <SectionComponent title="Stühle" src={GamingChair} href='/Stühle'/>
+          <SectionComponent title="PCs" src={PC} href='/PCs'/>
         </div>
       </div>
     </div>

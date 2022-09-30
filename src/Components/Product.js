@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Product({src, text, price, inShoppingCart, setInShoppingCart}) {
+function Product({src, text, price, inShoppingCart, setInShoppingCart, classname}) {
 
 
   const countandset = () => {
@@ -8,8 +8,8 @@ function Product({src, text, price, inShoppingCart, setInShoppingCart}) {
     localStorage.setItem('Number for ShoppingCartIcon', inShoppingCart);
   }
   return (
-    <div className='bg-slate-200 w-full h-full rounded-xl shadow-xl'>
-        <p className=' flex justify-center pt-2 font-semibold text-3xl text-slate-600'>
+    <div className={classname}>
+        <p className='flex justify-center pt-2 font-semibold text-3xl text-slate-600'>
           {price}€
         </p>
 

@@ -41,11 +41,6 @@ export const HandyPageData = [
         'src': 'https://m.media-amazon.com/images/I/616dWFinzLL._AC_SX679_.jpg'
     },
     {
-        'title': 'Samsung Galaxy S20 FE (128 GB)',
-        'price': '419,99',
-        'src': 'https://m.media-amazon.com/images/I/61GbkDVtLwL._AC_SX679_.jpg'
-    },
-    {
         'title': 'Samsung Galaxy S20 (128 GB)',
         'price': '549,99',
         'src': 'https://m.media-amazon.com/images/I/71jurfT07uL._AC_SX679_.jpg'

@@ -20,7 +20,7 @@
     transition: box-shadow 0.3s ease;
 }
 .picture-round {
-    border-radius: 33px;
+    border-radius: 30px;
 }
 
 @media (max-width: 850px) {

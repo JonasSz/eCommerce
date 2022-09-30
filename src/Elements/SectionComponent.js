@@ -7,7 +7,7 @@ function SectionComponent({href, src, title}) {
           {title}
         </h1>
 
-        <a href={href} className=''>
+        <a href={href}>
         <img src={src} className=' relative'/>
         </a>
 
