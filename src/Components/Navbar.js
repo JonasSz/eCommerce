@@ -64,7 +64,7 @@ function Navbar({inShoppingCart}) {
 
       <div className="grid gap-10 bg-slate-300 mx-5 rounded-b-xl shadow-2xl hidden" ref={DropdownRef}>
       <Searchbar SearchbarRef={SearchbarRef} />
-      <ShoppingCarrtIcon CartRef={CartRef} />
+      <ShoppingCarrtIcon CartRef={CartRef} inShoppingCart={inShoppingCart}/>
       </div>
 
     </>

@@ -6,7 +6,7 @@ import { HandyPageData } from '../Data/HandyPageData'
 
 
 function ProductPage() {
-  const [setInShoppingCart, inShoppingCart] = useState(0);
+  const [inShoppingCart, setInShoppingCart] = useState(0);
   const listHandys = HandyPageData.map((data) => <Product setInShoppingCart={setInShoppingCart} inShoppingCart={inShoppingCart} src={data.src} text={data.title} price={data.price}/>)
 
 
