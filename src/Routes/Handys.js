@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Components/Navbar';
 import Product from '../Components/Product';
 import { HandyPageData } from '../Data/HandyPageData'
@@ -6,23 +6,19 @@ import { HandyPageData } from '../Data/HandyPageData'
 
 
 function ProductPage() {
-  const listHandys = HandyPageData.map((data) => <Product src={data.src} text={data.title} price={data.price}/>)
+  const [setInShoppingCart, inShoppingCart] = useState(0);
+  const listHandys = HandyPageData.map((data) => <Product setInShoppingCart={setInShoppingCart} inShoppingCart={inShoppingCart} src={data.src} text={data.title} price={data.price}/>)
 
 
   return (
     <>
-    <Navbar />
+    <Navbar inShoppingCart={inShoppingCart}/>
 
     <div className="site-wrap mt-5 mx-5">
       {listHandys}
 
     </div>
-    <div className="site-wrap mt-5 mx-5">
 
-    </div>
-    <div className="site-wrap mt-5 mx-5">
-
-    </div>
 
     </>
   )

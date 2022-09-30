@@ -1,7 +1,7 @@
 import React from "react";
 import SectionComponent from "../Elements/SectionComponent";
 import HeadphonesSilver from "../Pictures/Headphones-silver.png";
-import iPhone13 from "../Pictures/iPhone13.png";
+import iPhone13 from "../Pictures/Handys/iPhone13.png";
 import GamingChair from "../Pictures/GamingChair2.png";
 import PC from "../Pictures/PC2.png";
 

@@ -19,7 +19,9 @@
     width: max(70%, 30%);
     transition: box-shadow 0.3s ease;
 }
-
+.picture-round {
+    border-radius: 33px;
+}
 
 @media (max-width: 850px) {
     .searchbar{

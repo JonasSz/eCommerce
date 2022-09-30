@@ -4,7 +4,7 @@ import Searchbar from "../Elements/Searchbar";
 import ShoppingCarrtIcon from "../Elements/ShoppingCartIcon";
 import Title from "../Elements/Title";
 
-function Navbar() {
+function Navbar({inShoppingCart}) {
   const style =
     "bg-slate-300 shadow-2xl bg-opacity-75 rounded-xl mx-4 mt-2 flex justify-around h-20 relative";
   const [toggle, setToggle] = useState(false);
@@ -58,7 +58,7 @@ function Navbar() {
       <nav className={style}>
         <Title />
         <Searchbar />
-        <ShoppingCarrtIcon />
+        <ShoppingCarrtIcon inShoppingCart={inShoppingCart}/>
         <DropMenu toggle={toggle} setToggle={setToggle} />
       </nav>
 
