@@ -4,10 +4,10 @@ import BestSales from '../Components/BestSales';
 import Slider from '../Components/Slider';
 
 
-function Home() {
+function Home({}) {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar NumbOfBought={localStorage.getItem('count')}/>
       <Slider />
       <SectionPopular />
       <BestSales />

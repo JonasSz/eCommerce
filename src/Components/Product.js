@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-function Product({src, text, price, inShoppingCart, setInShoppingCart, classname, rounded}) {
+function Product({src, text, price, classname, rounded, increase}) {
 
 
-  const countandset = () => {
-    setInShoppingCart(inShoppingCart + 1);
-    localStorage.setItem('Number for ShoppingCartIcon', inShoppingCart);
-  }
+
+
   return (
     <div className={classname}>
         <p className='flex justify-center pt-2 font-semibold text-3xl text-slate-600'>
@@ -22,7 +20,7 @@ function Product({src, text, price, inShoppingCart, setInShoppingCart, classname
           {text}
         </p>
         <div className='buttons-wrap mb-4'>
-        <button onClick={countandset} className='bg-slate-400 rounded-md text-lg font-semibold mt-5 ml-2 mr-2 hover:bg-slate-500 transition delay-50'>
+        <button onClick={increase} className='bg-slate-400 rounded-md text-lg font-semibold mt-5 ml-2 mr-2 hover:bg-slate-500 transition delay-50'>
           Kaufen
         </button>
 

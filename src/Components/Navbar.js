@@ -4,7 +4,10 @@ import Searchbar from "../Elements/Searchbar";
 import ShoppingCarrtIcon from "../Elements/ShoppingCartIcon";
 import Title from "../Elements/Title";
 
-function Navbar({inShoppingCart}) {
+function Navbar({NumbOfBought}) {
+
+
+
   const style =
     "bg-slate-300 shadow-2xl bg-opacity-75 rounded-xl mx-4 mt-2 flex justify-around h-20 relative";
   const [toggle, setToggle] = useState(false);
@@ -14,8 +17,8 @@ function Navbar({inShoppingCart}) {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
     useEffect(() => {                             // Update windowsize
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
+       function handleWindowResize() {
+       setWindowSize(getWindowSize());
     }
 
     window.addEventListener('resize', handleWindowResize);
@@ -58,13 +61,13 @@ function Navbar({inShoppingCart}) {
       <nav className={style}>
         <Title />
         <Searchbar />
-        <ShoppingCarrtIcon inShoppingCart={inShoppingCart}/>
+        <ShoppingCarrtIcon NumbOfBought={NumbOfBought}/>
         <DropMenu toggle={toggle} setToggle={setToggle} />
       </nav>
 
       <div className="grid gap-10 bg-slate-300 mx-5 rounded-b-xl shadow-2xl hidden" ref={DropdownRef}>
       <Searchbar SearchbarRef={SearchbarRef} />
-      <ShoppingCarrtIcon CartRef={CartRef} inShoppingCart={inShoppingCart}/>
+      <ShoppingCarrtIcon CartRef={CartRef} NumbOfBought={NumbOfBought}/>
       </div>
 
     </>
