@@ -18,6 +18,11 @@ body {
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
 }
+.laptops-wrap {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+}
 .buttons-wrap {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
@@ -31,6 +36,9 @@ body {
 }
 .tablet-round {
     border-radius: 25px;
+}
+.laptops-responsive {
+    width: max(100%, 52%);
 }
 
 @media (max-width: 850px) {

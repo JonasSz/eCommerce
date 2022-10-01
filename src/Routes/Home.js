@@ -4,7 +4,7 @@ import BestSales from '../Components/BestSales';
 import Slider from '../Components/Slider';
 
 
-function Project() {
+function Home() {
   return (
     <div className="App">
       <Navbar />
@@ -17,4 +17,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Home;

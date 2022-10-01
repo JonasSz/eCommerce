@@ -5,7 +5,7 @@ import { TabletsData } from '../Data/TabletsData'
 
 
 
-function Chairs() {
+function Tablets() {
   const [inShoppingCart, setInShoppingCart] = useState(0);
   const listHandys = TabletsData.map((data) => <Product rounded='h-96 relative tablet-round' classname='bg-slate-200  w-full h-full rounded-xl shadow-xl' setInShoppingCart={setInShoppingCart} inShoppingCart={inShoppingCart} src={data.src} text={data.title} price={data.price}/>)
 
@@ -24,4 +24,4 @@ function Chairs() {
   )
 }
 
-export default Chairs
+export default Tablets
