@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import UltimativerKlang from "../Pictures/SliderPics/Ultimativer-Klang.png";
-import ChairSlider from "../Pictures/SliderPics/ChairSlider.png";
-import EchoFamily from "../Pictures/SliderPics/Echo-Family.png";
+import LaptopsSlider from "../Pictures/SliderPics/LaptopSlider2.jpg";
+import TabletSlider from "../Pictures/SliderPics/TabletSlider2.jpg";
 import HandySlider from "../Pictures/SliderPics/HandySlider.png";
 import SliderBtn from '../Elements/SliderBtn';
 import { CgArrowRightO } from 'react-icons/cg';
 import { CgArrowLeftO } from 'react-icons/cg';
 
 function Slider() {
-    const SliderPictures = [UltimativerKlang, ChairSlider, EchoFamily, HandySlider];
+    const SliderPictures = [UltimativerKlang, LaptopsSlider, TabletSlider, HandySlider];
     const [SliderPicNumber, setSliderPicNumber] = useState(0);
 
     useEffect(() => {
@@ -29,7 +29,15 @@ function Slider() {
 
   return (
     <div className='mt-5 flex justify-center relative'>
-              <a href="/" className='image-width relative hover:cursor-pointer'>
+              <a href={
+                SliderPicNumber === 0 ? '/Kopfhoerer' : (
+                  SliderPicNumber === 1 ? '/Laptops' : (
+                    SliderPicNumber === 2 ? '/Tablets' : (
+                      SliderPicNumber === 3 ? '/Handys' : null
+                    )
+                  )
+                )
+              } className='image-width relative hover:cursor-pointer'>
               <img src={SliderPictures[SliderPicNumber]} className='rounded-2xl shadow-2xl'/>
               </a>
 

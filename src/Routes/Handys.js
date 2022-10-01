@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../Components/Navbar';
 import Product from '../Components/Product';
 import { HandyPageData } from '../Data/HandyPageData'
-import { getBoughtNumber } from '../Elements/GetBoughtNumber';
 
 
 
