@@ -4,7 +4,7 @@ import Searchbar from "../Elements/Searchbar";
 import ShoppingCarrtIcon from "../Elements/ShoppingCartIcon";
 import Title from "../Elements/Title";
 
-function Navbar({NumbOfBought, isSearching, setIsSearching}) {
+function Navbar({NumbOfBought, isSearching, setIsSearching, setSearchValue, searchValue}) {
 
 
 
@@ -60,13 +60,13 @@ function Navbar({NumbOfBought, isSearching, setIsSearching}) {
     <>
       <nav className={style}>
         <Title />
-        <Searchbar isSearching={isSearching} setIsSearching={setIsSearching}/>
+        <Searchbar isSearching={isSearching} searchValue={searchValue} setIsSearching={setIsSearching} setSearchValue={setSearchValue}/>
         <ShoppingCarrtIcon NumbOfBought={NumbOfBought}/>
         <DropMenu toggle={toggle} setToggle={setToggle} />
       </nav>
 
       <div className="grid gap-10 bg-slate-300 mx-5 rounded-b-xl shadow-2xl hidden" ref={DropdownRef}>
-      <Searchbar SearchbarRef={SearchbarRef} isSearching={isSearching} setIsSearching={setIsSearching}/>
+      <Searchbar SearchbarRef={SearchbarRef} isSearching={isSearching} setIsSearching={setIsSearching} setSearchValue={setSearchValue}/>
       <ShoppingCarrtIcon CartRef={CartRef} NumbOfBought={NumbOfBought}/>
       </div>
 
